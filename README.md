@@ -1,2 +1,0 @@
-# Juan Alberto Delaroca
-### EquipoRoca
