@@ -2,7 +2,12 @@
     border-radius: 100%;
 }
 
-.circle-lrg {
+.circle-l {
+    height: 300px;
+    width: 300px;
+}
+
+.circle-m {
     height: 300px;
     width: 300px;
 }
