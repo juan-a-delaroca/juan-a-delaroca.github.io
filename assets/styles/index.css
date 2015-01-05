@@ -1,1 +1,8 @@
-foobar
+.circle {
+    border-radius: 100%;
+}
+
+.circle-lrg {
+    height: 300px;
+    width: 300px;
+}
