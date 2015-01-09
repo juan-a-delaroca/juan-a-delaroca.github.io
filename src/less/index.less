@@ -66,6 +66,150 @@
   border-bottom-left-radius: @radius;
 }
 
+// via: http://css-tricks.com/snippets/css/useful-css3-less-mixins/
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+    text-shadow: @string;
+}
+.box-shadow (@string) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow:    @string;
+    box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+    -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    -moz-box-shadow:    @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    box-shadow:     @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+    -webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    -moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing:    @type;
+    box-sizing:         @type;
+}
+
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+    -webkit-border-top-right-radius:    @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius:  @bottomleft;
+    -webkit-border-top-left-radius:     @topleft;
+
+    -moz-border-radius-topright:        @topright;
+    -moz-border-radius-bottomright:     @bottomright;
+    -moz-border-radius-bottomleft:      @bottomleft;
+    -moz-border-radius-topleft:         @topleft;
+
+    border-top-right-radius:            @topright;
+    border-bottom-right-radius:         @bottomright;
+    border-bottom-left-radius:          @bottomleft;
+    border-top-left-radius:             @topleft;
+
+    -moz-background-clip:    padding; 
+    -webkit-background-clip: padding-box; 
+    background-clip:         padding-box; 
+}
+
+.opacity (@opacity: 0.5) {
+    -webkit-opacity:    @opacity;
+    -moz-opacity:       @opacity;
+    opacity:        @opacity;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+    background-image: -moz-linear-gradient(left, @startColor, @endColor);
+    background-image: -ms-linear-gradient(left, @startColor, @endColor);
+    background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+    -webkit-animation: @name @duration @delay @ease;
+    -moz-animation:    @name @duration @delay @ease;
+    -ms-animation:     @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;  
+    -moz-transition:    @transition;
+    -ms-transition:     @transition; 
+    -o-transition:      @transition;  
+}
+.transform(@string){
+    -webkit-transform: @string;
+    -moz-transform:      @string;
+    -ms-transform:       @string;
+    -o-transform:        @string;
+}
+.scale (@factor) {
+    -webkit-transform: scale(@factor);
+    -moz-transform:      scale(@factor);
+    -ms-transform:       scale(@factor);
+    -o-transform:        scale(@factor);
+}
+.rotate (@deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform:      rotate(@deg);
+    -ms-transform:       rotate(@deg);
+    -o-transform:        rotate(@deg);
+}
+.skew (@deg, @deg2) {
+    -webkit-transform:       skew(@deg, @deg2);
+    -moz-transform:      skew(@deg, @deg2);
+    -ms-transform:       skew(@deg, @deg2);
+    -o-transform:        skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+    -webkit-transform:       translate(@x, @y);
+    -moz-transform:      translate(@x, @y);
+    -ms-transform:       translate(@x, @y);
+    -o-transform:        translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+    -webkit-transform:       translate3d(@x, @y, @z);
+    -moz-transform:      translate3d(@x, @y, @z);
+    -ms-transform:       translate3d(@x, @y, @z);
+    -o-transform:        translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+    -webkit-perspective:    @value;
+    -moz-perspective:   @value;
+    -ms-perspective:    @value;
+    perspective:        @value;
+}
+.transform-origin (@x:center, @y:center) {
+    -webkit-transform-origin: @x @y;
+    -moz-transform-origin:    @x @y;
+    -ms-transform-origin:     @x @y;
+    -o-transform-origin:      @x @y;
+}
+/**====
+ *
+ * END MIXINS
+ ==== */
+
 /**
  * Custom
  */
@@ -102,27 +246,27 @@ main > header h1,
 main > header h2 {
     margin-top: -350px;
     margin-bottom: 350px;
+    .rotate (-16deg);
 }
 
 main > header h1 {
-    font-size: 80px;
-    font-weight: normal;
+    font-size: 98px;
+    // font-weight: normal;
+    font-weight: lighter;
     text-transform: uppercase;
     color: orange;
+    border-bottom: 1px solid rgb(50,50,50);
+    transform: rotate(45);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 main > header h2 {
-    font-size: 70px;
+    font-size: 36px;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: normal;
+    // font-weight: lighter;
     color: orange;
-}
-
-section#about,
-section#work {
-    background-color: rgb(50,50,50);
-    color: rgb(248,248,248);
-    margin: 0 auto;
+    margin-left: 40px;
 }
 
 section#about:after,
@@ -139,58 +283,73 @@ section header {
 }
 
 section header:before {
-    border-top: 1px solid rgb(229,152,11);
+    border-top: 1px solid #e5980b;
     content: '';
     display: block;
     position: absolute;
     top: 60px;
-    width: 100%;
+    width: 60%;
+    left: 20%;
 }
 
 section header h3 {
-    color: orange;
+    color: #646464;
     font-size: 28px;
     line-height: 1;
-    font-weight: lighter;
+    font-weight: 300;
     text-transform: uppercase;
-    background-color: rgb(50,50,50);
     position: relative;
     display: inline-block;
     padding: 0 15px;
+    background-color: #f8f8f8;
+    letter-spacing: .03em;
+    + h5 {
+        line-height: 1;
+        font-style: italic;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: rgb(240,220,220);
+        margin: 0 0 30px;
+        text-shadow: 1px 1px 1px rgba(180,160,160,1);
+    }
 }
 
-section header h3 + a {
-    display: block;
-    border: 1px solid rgb(100,100,100);
-    width: 250px;
-    margin: 0 auto;
-    background: rgb(80,80,80);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 5px 10px;
-    line-height: 1;
-    border-radius: 3px;
-    transition: ease all .3s;
-}
-
-section header h3 + a:hover {
-    border: 1px solid rgb(80,80,80);
-    background: rgb(70,70,70);
+#DownloadResume {
+    text-align: center;
+    max-width: 25%;
+    a {
+        display: inline-block;
+        border: 1px solid rgb(100,100,100);
+        width: auto;
+        margin: 0 auto;
+        background: rgb(80,80,80);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 15px;
+        line-height: 1;
+        border-radius: 3px;
+        transition: ease all .3s;
+        &:hover {
+            border: 1px solid rgb(80,80,80);
+            background: rgb(70,70,70);
+        }
+    }
 }
 
 article h4 {
     color: rgb(229,152,11);
-    border-bottom: 1px solid rgb(229,152,11);
+    border-bottom: 1px solid #f0f0f0;
     display: inline-block;
     padding-right: 20px;
 }
 
 main > footer {
-    background-color: rgb(229,152,11);
+    background-color: #e5980b;
     margin: 0 auto;
     padding-bottom: 30px;
     min-height: 200px;
-    text-align: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 main > footer a,
@@ -237,15 +396,24 @@ ul.nostyle {
 }
 
 .u1x3 {
-    width: calc(100% / 3);
-    padding: 15px;
+    width: calc(33.33333333%);
+    padding: 0 60px 0 0;
     margin-left: -15px;
+    + .u1x3 {
+        &:last-child {
+            padding-right: 15px;
+        }
+    }
 }
 
 .u1x2 {
     width: calc(100% / 2);
     padding: 15px;
     margin-left: -15px;
+    // + .u1x2 {
+    //     float: right;
+    //     width: auto;
+    // }
 }
 
 a, a:link, a:active, a:visited {
@@ -262,11 +430,18 @@ p {
 
 .Modal {
     /*display: none;*/
+    h4 {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 3px 0 7px;
+    }
 }
 
 .circle {
     border-radius: 100%;
     overflow: hidden;
+    .box-shadow(0 0 15px 1px rgba(0,0,0,.1));
 }
 
 .circle-l {
@@ -277,4 +452,19 @@ p {
 .circle-m {
     height: 300px;
     width: 300px;
+    margin: 30px 0 60px;
+}
+
+.btn {
+    .border-radius(2px)
+    &:hover,
+    &:focus,
+    &.focus {
+        color: #d18401;
+    }
+}
+
+.Block-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }

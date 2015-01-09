@@ -4,15 +4,14 @@ module.exports = function (grunt) {
 
         scripts: {
             files: [
+                'grunt/tasks',
                 './index.html',
-                '<%= paths.src %>/*.js',
-                '<%= paths.src %>/less/*.less',
-                '<%= paths.src %>/images/*'
+                'src/js/*.js',
+                'src/less/*.less',
+                'src/images/*',
+                'src/fonts'
             ],
-            tasks: [
-                'imagemin',
-                'less'
-            ],
+            tasks: ['imagemin', 'less', 'concat', 'copy'],
             options: {
                 interrupt: true
             }

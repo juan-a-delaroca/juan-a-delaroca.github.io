@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     grunt.registerTask(
         'dev',
         'start local server and watch for changes to build',
-        ['clean', 'copy', 'imagemin', 'less', 'concat', 'concurrent']
+        ['clean', 'imagemin', 'less', 'concat', 'copy', 'concurrent']
     );
 
     grunt.registerTask(

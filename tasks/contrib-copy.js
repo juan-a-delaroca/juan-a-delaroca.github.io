@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         fontawesome: {
             expand: true,
             flatten: true,
-            src: '<%= paths.vendor %>/fonts/fontawesome/**',
+            src: '<%= paths.vendor %>/fontawesome/fonts/**',
             dest: '<%= paths.src %>/fonts',
             filter: 'isFile'      
         },
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         bootstrapglyphs: {
             expand: true,
             flatten: true,
-            src: '<%= paths.vendor %>/fonts/bootstrap/**',
+            src: '<%= paths.vendor %>/bootstrap/fonts/**',
             dest: '<%= paths.src %>/fonts',
             filter: 'isFile'
         },
