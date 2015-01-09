@@ -2,6 +2,8 @@
 #### A Creative Strategist
 ----
 
+[Homepage](http://juan-a-delaroca.github.io/)
+
 JAD is a Creative Strategist based in Denver, CO. Alum of CU-Boulder XXXX and Ohio University Sports Business MBA XXXX. Juan Alberto Delaroca has XX years experience with sports marketing, youth marketing, food and beverage marketing and hispanic market strategy. His ethnographic research methodology has been heralded as 'ground breaking' and 'monumental' by his peers. Delaroca is currently accepting new contracts.
 
 ----
