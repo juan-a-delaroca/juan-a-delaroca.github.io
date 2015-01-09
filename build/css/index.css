@@ -8160,11 +8160,15 @@ article h4 {
 }
 main > footer {
   background-color: #e5980b;
-  margin: 0 auto;
-  padding-bottom: 30px;
+  margin: 0 auto 60px;
+  padding-bottom: 60px;
   min-height: 200px;
   width: 100%;
   max-width: 100%;
+  border-top: 2px solid #646464;
+}
+main > footer .u1x2 {
+  padding-top: 0;
 }
 main > footer a,
 main > footer a:link,
@@ -8180,12 +8184,12 @@ main > footer h3 {
   color: #323232;
   font-size: 28px;
   line-height: 1;
-  font-weight: lighter;
+  font-weight: 300;
   text-transform: uppercase;
   background-color: #e5980b;
   position: relative;
-  display: inline-block;
-  padding: 0 15px;
+  display: block;
+  border-bottom: 1px solid rgba(130, 130, 130, 0.5);
 }
 main > footer h3:after {
   content: '';
