@@ -1,0 +1,280 @@
+@import "bootstrap.less";
+@import "font-awesome.less";
+
+/**
+ * Paths
+ */
+@base-img-url: "/build/img";
+@fa-font-path: "/build/fonts";
+
+/**
+ * Colors
+ */
+@white: rgb(255, 255, 255);
+@black: rgb(0, 0, 0);
+@red: @label-danger-bg;
+@green: @label-success-bg;
+@orange: @label-warning-bg;
+
+@grayLighter: @gray-lighter;
+@grayLight: @gray-light;
+@grayDark: @gray-dark;
+@grayDarker: @gray-darker;
+
+// @ms7-gray-light: rgb(204, 204, 204);
+// @ms7-gray-lighter: rgb(230, 230, 230);
+// @ms7-gray-lightest: rgb(245, 245, 245);
+
+// @ms7-brand-blue: rgb(0, 86, 150);
+// @ms7_primary_brand_color: #0088cc;
+
+/**
+ * Responsive
+ */
+@grid-float-breakpoint: @screen-xs-min;
+
+/**
+ * Font Sizing
+ */
+@baseFontSize: @font-size-base;
+
+/**
+ * Navbar
+ */
+// @navbar-inverse-bg: mix(@ms7-brand-blue, @white, 80%);
+// @navbar-inverse-bg: @ms7-brand-blue-dark;
+// @navbar-inverse-border: darken(@navbar-inverse-bg, 10%);
+
+@navbar-inverse-color: @white;
+@navbar-inverse-brand-color: @navbar-inverse-color;
+@navbar-inverse-link-color: @navbar-inverse-color;
+
+@navbar-inverse-link-hover-color: darken(@navbar-inverse-color, 10%);
+@navbar-inverse-link-color-active: @navbar-inverse-link-hover-color;
+@navbar-inverse-brand-hover-color: @navbar-inverse-link-hover-color;
+
+@navbar-inverse-link-background-hover: transparent;
+@navbar-inverse-link-background-active: @navbar-inverse-bg;
+
+/**
+ * Mixins
+ */
+.border-radius(@radius) {
+  border-top-right-radius: @radius;
+  border-bottom-right-radius: @radius;
+  border-top-left-radius: @radius;
+  border-bottom-left-radius: @radius;
+}
+
+/**
+ * Custom
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(229,152,11);
+}
+
+main#main {
+    background-color: rgb(248,248,248);
+}
+
+main > * {
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 15px;
+    position: relative;
+}
+
+main > header {
+    text-align: center;
+    min-height: 600px;
+}
+
+main > header .circle-l {
+    margin: 100px auto 0;
+}
+
+main > header h1,
+main > header h2 {
+    margin-top: -350px;
+    margin-bottom: 350px;
+}
+
+main > header h1 {
+    font-size: 80px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: orange;
+}
+
+main > header h2 {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: orange;
+}
+
+section#about,
+section#work {
+    background-color: rgb(50,50,50);
+    color: rgb(248,248,248);
+    margin: 0 auto;
+}
+
+section#about:after,
+section#work:after,
+main > footer {
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+
+section header {
+    text-align: center;
+}
+
+section header:before {
+    border-top: 1px solid rgb(229,152,11);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+
+section header h3 {
+    color: orange;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: lighter;
+    text-transform: uppercase;
+    background-color: rgb(50,50,50);
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+section header h3 + a {
+    display: block;
+    border: 1px solid rgb(100,100,100);
+    width: 250px;
+    margin: 0 auto;
+    background: rgb(80,80,80);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 10px;
+    line-height: 1;
+    border-radius: 3px;
+    transition: ease all .3s;
+}
+
+section header h3 + a:hover {
+    border: 1px solid rgb(80,80,80);
+    background: rgb(70,70,70);
+}
+
+article h4 {
+    color: rgb(229,152,11);
+    border-bottom: 1px solid rgb(229,152,11);
+    display: inline-block;
+    padding-right: 20px;
+}
+
+main > footer {
+    background-color: rgb(229,152,11);
+    margin: 0 auto;
+    padding-bottom: 30px;
+    min-height: 200px;
+    text-align: center;
+}
+
+main > footer a,
+main > footer a:link,
+main > footer a:active,
+main > footer a:visited {
+    color: rgb(50,50,50);
+}
+
+main > footer a:hover,
+main > footer a:focus {
+    color: rgb(30,30,30);
+}
+
+main > footer h3 {
+    color: rgb(50,50,50); font-size: 28px; line-height: 1; font-weight: lighter; text-transform: uppercase; 
+    background-color: rgb(229,152,11); position: relative; display: inline-block; padding: 0 15px;
+}
+
+main > footer h3:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+ul.nostyle {
+    list-style: none;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.Block-row {
+    clear: left;
+}
+
+.u {
+    display: inline-block;
+    float: left;
+}
+
+.u1x3 {
+    width: calc(100% / 3);
+    padding: 15px;
+    margin-left: -15px;
+}
+
+.u1x2 {
+    width: calc(100% / 2);
+    padding: 15px;
+    margin-left: -15px;
+}
+
+a, a:link, a:active, a:visited {
+    color: rgb(229,152,11);
+}
+
+a, a:hover, a:focus {
+    color: rgb(209,132,1);
+}
+
+p {
+    line-height: 1.4;
+}
+
+.Modal {
+    /*display: none;*/
+}
+
+.circle {
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.circle-l {
+    height: 600px;
+    width: 600px;
+}
+
+.circle-m {
+    height: 300px;
+    width: 300px;
+}
