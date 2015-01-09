@@ -26,4 +26,4 @@ Run a static server and build for active development
 Package a "production" build
 `$ grunt prod`
 
-:horse: <span style="color: orange; background-color: blue;">GO BRONCOS</span>
+:horse: GO BRONCOS
