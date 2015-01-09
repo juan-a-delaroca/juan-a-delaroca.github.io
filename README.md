@@ -6,7 +6,9 @@ JAD is a Creative Strategist based in Denver, CO. Alum of CU-Boulder XXXX and Oh
 
 ----
 
-Looking for the dev README? :lookdown:
+![Octocat](https://camo.githubusercontent.com/20232135c459ea65f3b35e4c779725bc789b4c9c/687474703a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f646f6a6f6361742e6a7067)
+
+Looking for the dev README?
 
 Using NVM<https://github.com/creationix/nvm> with Node 0.10.29 / NPM 1.4.14
 `$ nvm use 0.10.29`
@@ -23,4 +25,4 @@ Run a static server and build for active development
 Package a "production" build
 `$ grunt prod`
 
-BRONCOS :horse: :donkey:
+BRONCOS :horse:
