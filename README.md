@@ -20,10 +20,8 @@ Using [NVM](https://github.com/creationix/nvm) with Node 0.10.29 / NPM 1.4.14
 
 `$ bower install`
 
-Run a static server and build for active development
-`$ grunt dev`
+`$ grunt dev`  Run a static server and build for active development
 
-Package a "production" build
-`$ grunt prod`
+`$ grunt prod`  Package a "production" build
 
 :horse: GO BRONCOS
