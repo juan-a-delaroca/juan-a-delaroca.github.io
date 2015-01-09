@@ -11,6 +11,7 @@ JAD is a Creative Strategist based in Denver, CO. Alum of CU-Boulder XXXX and Oh
 Looking for the dev README?
 
 Using [NVM](https://github.com/creationix/nvm) with Node 0.10.29 / NPM 1.4.14
+
 `$ nvm use 0.10.29`
 
 `$ npm install`
